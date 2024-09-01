@@ -73,6 +73,8 @@ void InterpolationFilter::initInterpolationFilterARM()
   switch( vext )
   {
   case NEON:
+  case SVE:
+  case SVE2:
     _initInterpolationFilterARM<NEON>();
     break;
   default:
@@ -88,6 +90,8 @@ void PelBufferOps::initPelBufOpsARM()
   switch( vext )
   {
   case NEON:
+  case SVE:
+  case SVE2:
     _initPelBufOpsARM<NEON>();
     break;
   default:
@@ -103,6 +107,8 @@ void RdCost::initRdCostARM()
   switch( vext )
   {
   case NEON:
+  case SVE:
+  case SVE2:
     _initRdCostARM<NEON>();
     break;
   default:
@@ -118,6 +124,8 @@ void MCTF::initMCTF_ARM()
   switch( vext )
   {
   case NEON:
+  case SVE:
+  case SVE2:
     _initMCTF_ARM<NEON>();
     break;
   default:
